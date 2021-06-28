@@ -18,9 +18,9 @@ def main():
     print("START")
     init() #Initialize GPIO pins
     
-    sec_1 = 2 #Number of seconds to power motor 1
-    sec_2 = 2 #Number of seconds to power motor 2
-    sec_3 = 2 #Number of seconds to power motor 3
+    sec_1 = 0 #Number of seconds to power motor 1
+    sec_2 = 20 #Number of seconds to power motor 2
+    sec_3 = 10 #Number of seconds to power motor 3
     sec_4 = 2 #Number of seconds to power motor 4
 
     motor1(sec_1) #Power motor 1
