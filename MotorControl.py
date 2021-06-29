@@ -77,10 +77,10 @@ if __name__ == "__main__":
     init() #Initialize GPIO pins
     
     
-    sec_1 = 5 #Number of seconds to power motor 1
-    sec_2 = 30 #Number of seconds to power motor 2
+    sec_1 = 0 #Number of seconds to power motor 1
+    sec_2 = 0 #Number of seconds to power motor 2
     sec_3 = 0 #Number of seconds to power motor 3
-    sec_4 = 2 #Number of seconds to power motor 4
+    sec_4 = 0 #Number of seconds to power motor 4
     
 
     motor1(sec_1) #Power motor 1
