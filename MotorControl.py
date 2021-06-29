@@ -12,28 +12,6 @@ motor 4     13  29
 
 
 '''
-
-
-def main():
-    print("START")
-    init() #Initialize GPIO pins
-    
-    sec_1 = 0 #Number of seconds to power motor 1
-    sec_2 = 20 #Number of seconds to power motor 2
-    sec_3 = 10 #Number of seconds to power motor 3
-    sec_4 = 2 #Number of seconds to power motor 4
-
-    motor1(sec_1) #Power motor 1
-    motor2(sec_2) #Power motor 2
-    motor3(sec_3) #Power motor 3
-    motor4(sec_4) #Power motor 4
-
-    time.sleep(0.1) #Sleep for a tenth of a second to let everything chill tfo
-    
-    gpio.cleanup() #Let python sort out those GPIO pin states
-    
-    print("DONE")
-    return 1
     
 def init():
 	gpio.setmode(gpio.BCM)
@@ -92,4 +70,26 @@ def motor4(sec_4):
     
     time.sleep(0.1) #Sleep to let everything come to a rest
 
-main()
+
+
+if __name__ == "__main__":
+    print("START")
+    init() #Initialize GPIO pins
+    
+    
+    sec_1 = 4 #Number of seconds to power motor 1
+    sec_2 = 2 #Number of seconds to power motor 2
+    sec_3 = 0 #Number of seconds to power motor 3
+    sec_4 = 2 #Number of seconds to power motor 4
+    
+
+    motor1(sec_1) #Power motor 1
+    motor2(sec_2) #Power motor 2
+    motor3(sec_3) #Power motor 3
+    motor4(sec_4) #Power motor 4
+
+    time.sleep(0.1) #Sleep for a tenth of a second to let everything chill tfo
+    
+    gpio.cleanup() #Let python sort out those GPIO pin states
+    
+    print("DONE")

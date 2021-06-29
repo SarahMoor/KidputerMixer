@@ -11,27 +11,10 @@ from tkinter import *
 from tkinter import colorchooser
 
 
-'''
-# Function that will be invoked when the
-# button will be clicked in the main window
-def choose_color():
- 
-    # variable to store hexadecimal code of color
-    color_code = colorchooser.askcolor(title ="Choose color")
-    return(color_code)
- 
-root = Tk()
-button = Button(root, text = "Select color",
-                   command = choose_color)
-button.pack()
-root.geometry("300x300")
-root.mainloop()
-
-print (button)
-'''
-
 from tkinter import Tk, Label, Button
-import MotorControl
+
+# importing motor control python
+from MotorControl import motor1, motor2, motor3, motor4
 
 class ColorPicker:
     def __init__(self, master):
@@ -63,8 +46,17 @@ class ColorPicker:
     def PrintColor(self):
         print (self.color_chosen)
         
-root = Tk()
-my_gui = ColorPicker(root)
-root.mainloop()
+        
+        
+    def RunMotor1(self, sec):
+        return 1
+        
+def main ():
+    
+    root = Tk()
+    my_gui = ColorPicker(root)
+    root.mainloop()
 
-print (ColorPicker.PrintColor)
+    print (ColorPicker.PrintColor)
+    
+main()
