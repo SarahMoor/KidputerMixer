@@ -69,17 +69,14 @@ class ColorPicker:
         
         
     def GetMotorSecs(self):
+        '''
         time1 = self.time_var1.get()
         time2 = self.time_var2.get()
         time3 = self.time_var3.get()
         time4 = self.time_var4.get()
+        '''
         
         self.RunMotors
-
-        print (time1)
-        print (time2)
-        print (time3)
-        print (time4)
         
     def ColorSpectrum(self):
         # variable to store hexadecimal code of color
@@ -90,8 +87,6 @@ class ColorPicker:
         
     def PrintColor(self):
         print (self.color_chosen)
-        print (self.time_var1)
-        print (self.time_var2)
         
         
     def RunMotors(self):
